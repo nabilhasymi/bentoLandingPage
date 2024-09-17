@@ -1,0 +1,281 @@
+body {
+  font-family: "Poppins";
+  margin: 0 1rem;
+  background-color: #262b32;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.navbar .left {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .right {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+
+.navbar .left,
+.navbar .right {
+  flex: 1;
+}
+
+.navbar button {
+  all: unset;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "products products blog blog"
+    "products products blog blog"
+    "products products about contact"
+    "products products about contact";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 20dvh);
+  gap: 1rem;
+  text-align: center;
+}
+
+.products,
+.blog,
+.about,
+.contact {
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+
+.products {
+  color: #fff;
+  grid-area: products;
+  background-image: url("https://images.unsplash.com/photo-1663517768994-a65e6ab3a40a?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 1rem;
+  padding: 3rem 2.5rem;
+}
+
+.products h3 {
+  margin: 0 0 1rem;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.products button {
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+  margin-top: auto;
+  text-align: start;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.products button .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.products button .left {
+  padding-right: 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  gap: 2px;
+}
+
+.products button .col span {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.products button .col h4 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 1rem;
+}
+
+.products .overlay {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 1rem;
+  z-index: 100;
+}
+
+.blog {
+  grid-area: blog;
+  background-image: url("https://images.unsplash.com/photo-1518972734183-c5b490a7c637?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.about {
+  grid-area: about;
+  background-image: url("https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.contact {
+  grid-area: contact;
+  background-image: url("https://images.unsplash.com/photo-1527049979667-990f1d0d8e7f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.blog,
+.about,
+.contact {
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+}
+
+.about,
+.contact {
+  color: #fff;
+}
+
+.blog .h3,
+.about .h3,
+.contact .h3 {
+  margin-top: auto;
+  font-family: Inter;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* TRANSITION */
+.navbar .login {
+  background-color: white;
+  color: black;
+}
+
+.navbar .login:hover {
+  background-color: lightgrey;
+}
+
+.navbar .signup {
+  background-color: black;
+  color: #fff;
+}
+
+.navbar .signup:hover,
+.navbar .signup:active {
+  background-color: #1e1e1e;
+}
+
+.navbar a {
+  all: unset;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .left a:hover {
+  color: lightgrey;
+}
+
+.navbar a:active {
+  color: grey;
+}
+
+.products button:hover {
+  background-color: lightgray;
+}
+
+.products button:active {
+  background-color: gray;
+}
+
+.products::before,
+.blog::before,
+.about::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.1)
+  ); /* Overlay color */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease;
+  z-index: 0; /* Behind the content */
+}
+
+.products:hover::before,
+.blog:hover::before,
+.about:hover::before,
+.contact:hover::before {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.products *,
+.blog *,
+.about *,
+.contact * {
+  position: relative; /* Ensure all content is above the overlay */
+  z-index: 1;
+}
+
+.blog .h3:active,
+.about .h3:active,
+.contact .h3:active {
+  color: grey;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  main {
+    grid-template-areas:
+      "products products products products"
+      "blog blog blog blog"
+      "about about contact contact";
+    grid-template-rows: 2fr 1fr 1fr;
+    margin-bottom: 1rem;
+  }
+
+  .blog {
+    background-position: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    background-color: #161616;
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
